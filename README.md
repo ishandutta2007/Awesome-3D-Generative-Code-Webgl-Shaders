@@ -4,7 +4,7 @@
 
 <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
 <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-<a href="https://github.com/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders?style=social" alt="GitHub stars" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders?style=social" alt="GitHub_Stars" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders?style=social" alt="GitHub forks" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders" alt="GitHub issues" /></a>
 <a href="https://github.com/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-3D-Generative-Code-Webgl-Shaders" alt="License" /></a>
@@ -75,9 +75,9 @@ The following table presents premier SaaS and hosted platforms for 3D generative
 
 ## 💻 Open-Source GitHub Projects 🛠️
 
-The following repositories represent foundational tools, libraries, shader IDEs, and spatial AI harnesses for 3D generative code and WebGL/WebGPU graphics. Repositories are sorted in **descending order by GitHub star count** ⭐.
+The following repositories represent foundational tools, libraries, shader IDEs, and spatial AI harnesses for 3D generative code and WebGL/WebGPU graphics. Repositories are sorted in **descending order by GitHub Stars_Count** ⭐.
 
-| Repository 📦 | GitHub Stars ⭐ | License 📜 | Description & Focus 📝 |
+| Repository 📦 | GitHub_Stars ⭐ | License 📜 | Description & Focus 📝 |
 | :--- | :--- | :--- | :--- |
 | **[mrdoob/three.js](https://github.com/mrdoob/three.js)** | [![Stars](https://img.shields.io/github/stars/mrdoob/three.js?style=social&color=white)](https://github.com/mrdoob/three.js/stargazers) | `MIT` | The premier JavaScript 3D library for WebGL/WebGPU, featuring custom `ShaderMaterial`, post-processing passes, TSL (Three.js Shading Language), and browser scene editor. |
 | **[pmndrs/react-three-fiber](https://github.com/pmndrs/react-three-fiber)** | [![Stars](https://img.shields.io/github/stars/pmndrs/react-three-fiber?style=social&color=white)](https://github.com/pmndrs/react-three-fiber/stargazers) | `MIT` | Powerful React renderer for Three.js, enabling declarative, component-driven 3D generative scenes, custom shader hook bindings, and dynamic canvas rendering. |
@@ -116,7 +116,7 @@ We warmly welcome community contributions! Follow these steps to submit addition
 2. 🌿 **Create a descriptive feature branch** (`git checkout -b feat/add-new-shader-tool`).
 3. 📝 **Add or update entries in `README.md`**:
    * For SaaS products, include pricing tiers, free plan limits, company size/valuation, and feature breakdown.
-   * For Open-Source projects, provide repo link, star badge (`style=social&color=white`), license, and focus.
+   * For Open-Source projects, provide repo link, Stars_Badge (`style=social&color=white`), license, and focus.
 4. 🚀 **Commit your changes cleanly** and open a Pull Request with a short summary of the additions.
 
 ---
