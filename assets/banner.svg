@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14" />
+      <stop offset="45%" stop-color="#0e1226" />
+      <stop offset="100%" stop-color="#05050b" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="40%" stop-color="#4facfe" />
+      <stop offset="75%" stop-color="#a18cd1" />
+      <stop offset="100%" stop-color="#fbc2eb" />
+    </linearGradient>
+
+    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38ef7d" />
+      <stop offset="100%" stop-color="#11998e" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.08)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.02)" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.2) translate(30px, -20px); opacity: 0.65; }
+      100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+    }
+    @keyframes pulseOrb2 {
+      0% { transform: scale(1.1) translate(0, 0); opacity: 0.3; }
+      50% { transform: scale(0.9) translate(-40px, 25px); opacity: 0.6; }
+      100% { transform: scale(1.1) translate(0, 0); opacity: 0.3; }
+    }
+    @keyframes floatPill {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes rotateWireframe {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes waveDash {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 200; }
+    }
+    .orb-1 { animation: pulseOrb 8s ease-in-out infinite; transform-origin: 200px 100px; }
+    .orb-2 { animation: pulseOrb2 10s ease-in-out infinite; transform-origin: 1000px 300px; }
+    .pill-group-1 { animation: floatPill 5s ease-in-out infinite; }
+    .pill-group-2 { animation: floatPill 6s ease-in-out infinite 1s; }
+    .pill-group-3 { animation: floatPill 5.5s ease-in-out infinite 2s; }
+    .wireframe-cube { animation: rotateWireframe 24s linear infinite; transform-origin: 1060px 120px; }
+    .shader-wave { stroke-dasharray: 12, 12; animation: waveDash 10s linear infinite; }
+  </style>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="420" rx="20" fill="url(#bgGrad)" />
+
+  <!-- Perspective Isometric Grid in Background (WebGL theme) -->
+  <g opacity="0.13" stroke="#00f2fe" stroke-width="1">
+    <line x1="0" y1="420" x2="300" y2="280" />
+    <line x1="150" y1="420" x2="400" y2="280" />
+    <line x1="300" y1="420" x2="500" y2="280" />
+    <line x1="450" y1="420" x2="600" y2="280" />
+    <line x1="600" y1="420" x2="700" y2="280" />
+    <line x1="750" y1="420" x2="800" y2="280" />
+    <line x1="900" y1="420" x2="900" y2="280" />
+    <line x1="1050" y1="420" x2="1000" y2="280" />
+    <line x1="1200" y1="420" x2="1100" y2="280" />
+
+    <line x1="100" y1="380" x2="1100" y2="380" />
+    <line x1="200" y1="340" x2="1050" y2="340" />
+    <line x1="260" y1="310" x2="980" y2="310" />
+    <line x1="300" y1="280" x2="900" y2="280" />
+  </g>
+
+  <!-- Dynamic Glowing Orbs (Deep in background) -->
+  <circle class="orb-1" cx="200" cy="110" r="140" fill="url(#glowGrad)" filter="url(#glow)" />
+  <circle class="orb-2" cx="1020" cy="290" r="160" fill="url(#glowGrad)" filter="url(#glow)" />
+
+  <!-- Animated Rotating 3D Wireframe Polyhedron in Corner (Background element) -->
+  <g class="wireframe-cube" opacity="0.25">
+    <polygon points="1060,60 1120,90 1120,150 1060,180 1000,150 1000,90" fill="none" stroke="#00f2fe" stroke-width="2" />
+    <line x1="1060" y1="60" x2="1060" y2="180" stroke="#a18cd1" stroke-width="1.5" />
+    <line x1="1000" y1="90" x2="1120" y2="150" stroke="#a18cd1" stroke-width="1.5" />
+    <line x1="1000" y1="150" x2="1120" y2="90" stroke="#a18cd1" stroke-width="1.5" />
+  </g>
+
+  <!-- Animated Sine Wave (Shader function visualization) -->
+  <path class="shader-wave" d="M 50,390 Q 200,340 350,390 T 650,390 T 950,390 T 1150,390" fill="none" stroke="#7000ff" stroke-width="2" opacity="0.3" />
+
+  <!-- Foreground Content: Strict layered positioning to ensure 100% clarity & legibility -->
+  <g id="foreground-content">
+    <!-- Top Ecosystem Pill Tag -->
+    <g transform="translate(60, 48)">
+      <rect width="320" height="34" rx="17" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="1.2" />
+      <circle cx="20" cy="17" r="5" fill="#38ef7d" filter="url(#subtleGlow)" />
+      <text x="36" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#00f2fe" letter-spacing="1.5">WEBGL • WEBGPU • GLSL • WGSL</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="60" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="46" font-weight="900" fill="url(#textGrad)" letter-spacing="-0.5">
+      3D Generative Code &amp; WebGL Shaders
+    </text>
+
+    <!-- Subtitle -->
+    <text x="60" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="500" fill="#e0e6ed" opacity="0.95">
+      Curated Ecosystem of Cloud Sandboxes, Fragment Shaders &amp; 3D-as-Code Harnesses
+    </text>
+
+    <!-- Tagline description -->
+    <text x="60" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#94a3b8">
+      Real-time Raymarching • Spatial AI Agent Harnesses • Procedural SDFs • Live-Coding VJ Synthesis
+    </text>
+
+    <!-- Interactive / Dynamic Feature Badges in Foreground -->
+    <!-- Pill 1 -->
+    <g class="pill-group-1" transform="translate(60, 260)">
+      <rect width="180" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1.2" />
+      <circle cx="30" cy="26" r="10" fill="rgba(0, 242, 254, 0.2)" />
+      <text x="26" y="30" font-family="monospace" font-size="14" fill="#00f2fe" font-weight="bold">#</text>
+      <text x="50" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#ffffff">GLSL &amp; WGSL</text>
+      <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Compute &amp; Fragment</text>
+    </g>
+
+    <!-- Pill 2 -->
+    <g class="pill-group-2" transform="translate(260, 260)">
+      <rect width="190" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(161, 140, 209, 0.4)" stroke-width="1.2" />
+      <circle cx="30" cy="26" r="10" fill="rgba(161, 140, 209, 0.2)" />
+      <text x="25" y="31" font-family="monospace" font-size="14" fill="#a18cd1" font-weight="bold">&lt;&gt;</text>
+      <text x="50" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#ffffff">3D-as-Code AI</text>
+      <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Autonomous Verification</text>
+    </g>
+
+    <!-- Pill 3 -->
+    <g class="pill-group-3" transform="translate(470, 260)">
+      <rect width="190" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(56, 239, 125, 0.35)" stroke-width="1.2" />
+      <circle cx="30" cy="26" r="10" fill="rgba(56, 239, 125, 0.2)" />
+      <text x="24" y="30" font-family="monospace" font-size="13" fill="#38ef7d" font-weight="bold">fx</text>
+      <text x="50" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#ffffff">SDF &amp; Raymarch</text>
+      <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Procedural Geometry</text>
+    </g>
+
+    <!-- Pill 4 -->
+    <g class="pill-group-1" transform="translate(680, 260)">
+      <rect width="180" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(244, 114, 182, 0.35)" stroke-width="1.2" />
+      <circle cx="30" cy="26" r="10" fill="rgba(244, 114, 182, 0.2)" />
+      <text x="25" y="30" font-family="monospace" font-size="13" fill="#f472b6" font-weight="bold">⚡</text>
+      <text x="50" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Live Sandboxes</text>
+      <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Interactive Web Editors</text>
+    </g>
+
+    <!-- Pill 5 -->
+    <g class="pill-group-2" transform="translate(880, 260)">
+      <rect width="260" height="52" rx="12" fill="url(#cardGrad)" stroke="rgba(59, 130, 246, 0.4)" stroke-width="1.2" />
+      <circle cx="30" cy="26" r="10" fill="rgba(59, 130, 246, 0.2)" />
+      <text x="25" y="30" font-family="monospace" font-size="13" fill="#60a5fa" font-weight="bold">★</text>
+      <text x="50" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Open Source &amp; SaaS</text>
+      <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#94a3b8">Ranked by Market Metrics &amp; Stars</text>
+    </g>
+  </g>
+
+  <!-- Border Outline -->
+  <rect width="1200" height="420" rx="20" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5" />
+</svg>
